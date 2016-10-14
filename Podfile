@@ -5,6 +5,7 @@ target 'twitter-feed' do
   pod 'IGListKit'
   pod 'Mantle'
   pod 'ReactiveCocoa', '2.5'
+  pod 'Masonry'
   target "twitter-feedTests" do
     inherit! :search_paths
   end

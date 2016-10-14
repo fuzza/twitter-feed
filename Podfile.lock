@@ -3,6 +3,7 @@ PODS:
   - Mantle (2.0.7):
     - Mantle/extobjc (= 2.0.7)
   - Mantle/extobjc (2.0.7)
+  - Masonry (1.0.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -14,13 +15,15 @@ PODS:
 DEPENDENCIES:
   - IGListKit
   - Mantle
+  - Masonry
   - ReactiveCocoa (= 2.5)
 
 SPEC CHECKSUMS:
   IGListKit: 3242c475fa77e2abf2d4de319703088008fbe9b9
   Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
 
-PODFILE CHECKSUM: d3e7525bf2549771f8732c8796b89e8bde08a9ee
+PODFILE CHECKSUM: bd7ca35186633ae090bfb2ca59e0a5178ecc426a
 
 COCOAPODS: 1.0.1

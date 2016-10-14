@@ -20,6 +20,8 @@
 		6F16A72E1DB14D6000CF32D1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F16A72D1DB14D6000CF32D1 /* Social.framework */; };
 		6F16A7321DB15D2C00CF32D1 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A7311DB15D2C00CF32D1 /* Tweet.m */; };
 		6F16A7381DB1639100CF32D1 /* TwitterFeedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A7371DB1639100CF32D1 /* TwitterFeedViewModel.m */; };
+		6F16A73F1DB16D4700CF32D1 /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A73E1DB16D4700CF32D1 /* TweetCell.m */; };
+		6F16A7431DB171C300CF32D1 /* TweetsSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A7421DB171C300CF32D1 /* TweetsSectionController.m */; };
 		F54DA60D98BD0B8F69175ADA /* libPods-twitter-feed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F5E20961FF16A0AF9FE0E /* libPods-twitter-feed.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,10 @@
 		6F16A7311DB15D2C00CF32D1 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
 		6F16A7361DB1639100CF32D1 /* TwitterFeedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterFeedViewModel.h; sourceTree = "<group>"; };
 		6F16A7371DB1639100CF32D1 /* TwitterFeedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterFeedViewModel.m; sourceTree = "<group>"; };
+		6F16A73D1DB16D4700CF32D1 /* TweetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetCell.h; sourceTree = "<group>"; };
+		6F16A73E1DB16D4700CF32D1 /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
+		6F16A7411DB171C300CF32D1 /* TweetsSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsSectionController.h; sourceTree = "<group>"; };
+		6F16A7421DB171C300CF32D1 /* TweetsSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsSectionController.m; sourceTree = "<group>"; };
 		87E0163DAA0E63E4775769B0 /* libPods-twitter-feedTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-twitter-feedTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A859F67EC45A7716D2126603 /* Pods-twitter-feedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-feedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter-feedTests/Pods-twitter-feedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +186,7 @@
 		6F16A7391DB1673500CF32D1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				6F16A73C1DB16D2300CF32D1 /* Views */,
 				6F16A73A1DB1674000CF32D1 /* Feed */,
 			);
 			name = UI;
@@ -188,6 +195,7 @@
 		6F16A73A1DB1674000CF32D1 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				6F16A7401DB171AF00CF32D1 /* Collection */,
 				6F16A6FA1DB13D9F00CF32D1 /* TwitterFeedViewController.h */,
 				6F16A6FB1DB13D9F00CF32D1 /* TwitterFeedViewController.m */,
 				6F16A73B1DB1674C00CF32D1 /* ViewModel */,
@@ -202,6 +210,24 @@
 				6F16A7371DB1639100CF32D1 /* TwitterFeedViewModel.m */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		6F16A73C1DB16D2300CF32D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A73D1DB16D4700CF32D1 /* TweetCell.h */,
+				6F16A73E1DB16D4700CF32D1 /* TweetCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		6F16A7401DB171AF00CF32D1 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A7411DB171C300CF32D1 /* TweetsSectionController.h */,
+				6F16A7421DB171C300CF32D1 /* TweetsSectionController.m */,
+			);
+			name = Collection;
 			sourceTree = "<group>";
 		};
 		7B2376929F8B351B25D4C5D9 /* Frameworks */ = {
@@ -458,11 +484,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F16A6FC1DB13D9F00CF32D1 /* TwitterFeedViewController.m in Sources */,
+				6F16A7431DB171C300CF32D1 /* TweetsSectionController.m in Sources */,
 				6F16A6F91DB13D9F00CF32D1 /* AppDelegate.m in Sources */,
 				6F16A7381DB1639100CF32D1 /* TwitterFeedViewModel.m in Sources */,
 				6F16A7321DB15D2C00CF32D1 /* Tweet.m in Sources */,
 				6F16A6F61DB13D9F00CF32D1 /* main.m in Sources */,
 				6F16A72C1DB146CD00CF32D1 /* TweetsService.m in Sources */,
+				6F16A73F1DB16D4700CF32D1 /* TweetCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

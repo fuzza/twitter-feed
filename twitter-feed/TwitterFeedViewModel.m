@@ -23,8 +23,8 @@
 - (instancetype)initWithTweetsService:(TweetsService *)tweetsService {
     self = [super init];
     if(self) {
-        self.tweets = @[];
         self.tweetsService = tweetsService;
+        self.tweets = @[];
         [self setupCommands];
     }
     return self;

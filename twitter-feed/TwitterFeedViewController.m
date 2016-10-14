@@ -8,11 +8,14 @@
 
 #import "TwitterFeedViewController.h"
 #import "TwitterFeedViewModel.h"
+#import "TweetsSectionController.h"
+#import "TweetsSectionController.h"
 
-@interface TwitterFeedViewController ()
+@interface TwitterFeedViewController () <IGListAdapterDataSource>
 
 @property (nonatomic, strong) TwitterFeedViewModel *viewModel;
 @property (nonatomic, strong) IGListCollectionView *collectionView;
+@property (nonatomic, strong) IGListAdapter *listAdapter;
 
 @end
 
@@ -36,6 +39,13 @@
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     self.collectionView = [[IGListCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     [self.view addSubview:self.collectionView];
+    
+    IGListAdapterUpdater *updater = [[IGListAdapterUpdater alloc] init];
+    self.listAdapter = [[IGListAdapter alloc] initWithUpdater:updater
+                                                     viewController:self
+                                                   workingRangeSize:0];
+    self.listAdapter.collectionView = self.collectionView;
+    self.listAdapter.dataSource = self;
 }
 
 - (void)viewDidLayoutSubviews {
@@ -46,20 +56,29 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.viewModel.loadTweets execute:nil];
-    
-    @weakify(self);
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        @strongify(self);
-        [self.viewModel.loadTweets execute:nil];
-    });
 }
 
 - (void)setupObserving {
-    [[RACObserve(self.viewModel, tweets) map:^id(NSArray *tweets) {
-        return @(tweets.count);
-    }] subscribeNext:^(NSNumber *count) {
-        NSLog(@"Tweets count = %@", count);
-    }];
+    [self rac_liftSelector:@selector(tweetsDidUpdate:)
+      withSignalsFromArray:@[[RACObserve(self.viewModel, tweets) deliverOnMainThread]]];
+}
+
+- (void)tweetsDidUpdate:(NSArray <Tweet *> *)tweets{
+    [self.listAdapter performUpdatesAnimated:YES completion:nil];
+}
+
+#pragma mark - IGListAdapterDataSource
+
+- (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
+    return self.viewModel.tweets;
+}
+
+- (IGListSectionController<IGListSectionType> *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
+    return [[TweetsSectionController alloc] init];
+}
+
+- (UIView *)emptyViewForListAdapter:(IGListAdapter *)listAdapter {
+    return nil;
 }
 
 @end
