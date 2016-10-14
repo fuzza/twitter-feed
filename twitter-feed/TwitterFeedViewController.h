@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class TwitterFeedViewModel;
 
+@interface TwitterFeedViewController : UIViewController
+
+- (instancetype)initWithViewModel:(TwitterFeedViewModel *)viewModel;
 
 @end
 

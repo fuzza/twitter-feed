@@ -10,12 +10,16 @@
 		6A3E843DFE65528A467678A9 /* libPods-twitter-feedTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E0163DAA0E63E4775769B0 /* libPods-twitter-feedTests.a */; };
 		6F16A6F61DB13D9F00CF32D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A6F51DB13D9F00CF32D1 /* main.m */; };
 		6F16A6F91DB13D9F00CF32D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A6F81DB13D9F00CF32D1 /* AppDelegate.m */; };
-		6F16A6FC1DB13D9F00CF32D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A6FB1DB13D9F00CF32D1 /* ViewController.m */; };
-		6F16A6FF1DB13D9F00CF32D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F16A6FD1DB13D9F00CF32D1 /* Main.storyboard */; };
+		6F16A6FC1DB13D9F00CF32D1 /* TwitterFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A6FB1DB13D9F00CF32D1 /* TwitterFeedViewController.m */; };
 		6F16A7011DB13D9F00CF32D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F16A7001DB13D9F00CF32D1 /* Assets.xcassets */; };
 		6F16A7041DB13D9F00CF32D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F16A7021DB13D9F00CF32D1 /* LaunchScreen.storyboard */; };
 		6F16A70F1DB13D9F00CF32D1 /* twitter_feedTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A70E1DB13D9F00CF32D1 /* twitter_feedTests.m */; };
 		6F16A71A1DB13D9F00CF32D1 /* twitter_feedUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A7191DB13D9F00CF32D1 /* twitter_feedUITests.m */; };
+		6F16A7291DB144F400CF32D1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F16A7281DB144F400CF32D1 /* Accounts.framework */; };
+		6F16A72C1DB146CD00CF32D1 /* TweetsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A72B1DB146CD00CF32D1 /* TweetsService.m */; };
+		6F16A72E1DB14D6000CF32D1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F16A72D1DB14D6000CF32D1 /* Social.framework */; };
+		6F16A7321DB15D2C00CF32D1 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A7311DB15D2C00CF32D1 /* Tweet.m */; };
+		6F16A7381DB1639100CF32D1 /* TwitterFeedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A7371DB1639100CF32D1 /* TwitterFeedViewModel.m */; };
 		F54DA60D98BD0B8F69175ADA /* libPods-twitter-feed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F5E20961FF16A0AF9FE0E /* libPods-twitter-feed.a */; };
 /* End PBXBuildFile section */
 
@@ -45,9 +49,8 @@
 		6F16A6F51DB13D9F00CF32D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6F16A6F71DB13D9F00CF32D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6F16A6F81DB13D9F00CF32D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6F16A6FA1DB13D9F00CF32D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6F16A6FB1DB13D9F00CF32D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6F16A6FE1DB13D9F00CF32D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F16A6FA1DB13D9F00CF32D1 /* TwitterFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwitterFeedViewController.h; sourceTree = "<group>"; };
+		6F16A6FB1DB13D9F00CF32D1 /* TwitterFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwitterFeedViewController.m; sourceTree = "<group>"; };
 		6F16A7001DB13D9F00CF32D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F16A7031DB13D9F00CF32D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F16A7051DB13D9F00CF32D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +60,15 @@
 		6F16A7151DB13D9F00CF32D1 /* twitter-feedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "twitter-feedUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F16A7191DB13D9F00CF32D1 /* twitter_feedUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = twitter_feedUITests.m; sourceTree = "<group>"; };
 		6F16A71B1DB13D9F00CF32D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F16A7271DB1403300CF32D1 /* twitter-feed-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "twitter-feed-prefix.pch"; sourceTree = "<group>"; };
+		6F16A7281DB144F400CF32D1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6F16A72A1DB146CD00CF32D1 /* TweetsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsService.h; sourceTree = "<group>"; };
+		6F16A72B1DB146CD00CF32D1 /* TweetsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsService.m; sourceTree = "<group>"; };
+		6F16A72D1DB14D6000CF32D1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6F16A7301DB15D2C00CF32D1 /* Tweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
+		6F16A7311DB15D2C00CF32D1 /* Tweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
+		6F16A7361DB1639100CF32D1 /* TwitterFeedViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterFeedViewModel.h; sourceTree = "<group>"; };
+		6F16A7371DB1639100CF32D1 /* TwitterFeedViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterFeedViewModel.m; sourceTree = "<group>"; };
 		87E0163DAA0E63E4775769B0 /* libPods-twitter-feedTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-twitter-feedTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A859F67EC45A7716D2126603 /* Pods-twitter-feedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-feedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter-feedTests/Pods-twitter-feedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F16A72E1DB14D6000CF32D1 /* Social.framework in Frameworks */,
+				6F16A7291DB144F400CF32D1 /* Accounts.framework in Frameworks */,
 				F54DA60D98BD0B8F69175ADA /* libPods-twitter-feed.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,15 +127,14 @@
 		6F16A6F31DB13D9F00CF32D1 /* twitter-feed */ = {
 			isa = PBXGroup;
 			children = (
+				6F16A7391DB1673500CF32D1 /* UI */,
 				6F16A6F71DB13D9F00CF32D1 /* AppDelegate.h */,
 				6F16A6F81DB13D9F00CF32D1 /* AppDelegate.m */,
-				6F16A6FA1DB13D9F00CF32D1 /* ViewController.h */,
-				6F16A6FB1DB13D9F00CF32D1 /* ViewController.m */,
-				6F16A6FD1DB13D9F00CF32D1 /* Main.storyboard */,
 				6F16A7001DB13D9F00CF32D1 /* Assets.xcassets */,
 				6F16A7021DB13D9F00CF32D1 /* LaunchScreen.storyboard */,
 				6F16A7051DB13D9F00CF32D1 /* Info.plist */,
 				6F16A6F41DB13D9F00CF32D1 /* Supporting Files */,
+				6F16A72F1DB15D1D00CF32D1 /* Domain */,
 			);
 			path = "twitter-feed";
 			sourceTree = "<group>";
@@ -130,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				6F16A6F51DB13D9F00CF32D1 /* main.m */,
+				6F16A7271DB1403300CF32D1 /* twitter-feed-prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -152,9 +166,49 @@
 			path = "twitter-feedUITests";
 			sourceTree = "<group>";
 		};
+		6F16A72F1DB15D1D00CF32D1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A72A1DB146CD00CF32D1 /* TweetsService.h */,
+				6F16A72B1DB146CD00CF32D1 /* TweetsService.m */,
+				6F16A7301DB15D2C00CF32D1 /* Tweet.h */,
+				6F16A7311DB15D2C00CF32D1 /* Tweet.m */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		6F16A7391DB1673500CF32D1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A73A1DB1674000CF32D1 /* Feed */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		6F16A73A1DB1674000CF32D1 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A6FA1DB13D9F00CF32D1 /* TwitterFeedViewController.h */,
+				6F16A6FB1DB13D9F00CF32D1 /* TwitterFeedViewController.m */,
+				6F16A73B1DB1674C00CF32D1 /* ViewModel */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		6F16A73B1DB1674C00CF32D1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6F16A7361DB1639100CF32D1 /* TwitterFeedViewModel.h */,
+				6F16A7371DB1639100CF32D1 /* TwitterFeedViewModel.m */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		7B2376929F8B351B25D4C5D9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F16A72D1DB14D6000CF32D1 /* Social.framework */,
+				6F16A7281DB144F400CF32D1 /* Accounts.framework */,
 				280F5E20961FF16A0AF9FE0E /* libPods-twitter-feed.a */,
 				87E0163DAA0E63E4775769B0 /* libPods-twitter-feedTests.a */,
 			);
@@ -286,7 +340,6 @@
 			files = (
 				6F16A7041DB13D9F00CF32D1 /* LaunchScreen.storyboard in Resources */,
 				6F16A7011DB13D9F00CF32D1 /* Assets.xcassets in Resources */,
-				6F16A6FF1DB13D9F00CF32D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,9 +457,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F16A6FC1DB13D9F00CF32D1 /* ViewController.m in Sources */,
+				6F16A6FC1DB13D9F00CF32D1 /* TwitterFeedViewController.m in Sources */,
 				6F16A6F91DB13D9F00CF32D1 /* AppDelegate.m in Sources */,
+				6F16A7381DB1639100CF32D1 /* TwitterFeedViewModel.m in Sources */,
+				6F16A7321DB15D2C00CF32D1 /* Tweet.m in Sources */,
 				6F16A6F61DB13D9F00CF32D1 /* main.m in Sources */,
+				6F16A72C1DB146CD00CF32D1 /* TweetsService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,14 +498,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6F16A6FD1DB13D9F00CF32D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6F16A6FE1DB13D9F00CF32D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6F16A7021DB13D9F00CF32D1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -556,6 +604,8 @@
 			baseConfigurationReference = 07C05FDD3C00335695306AD5 /* Pods-twitter-feed.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "twitter-feed/twitter-feed-prefix.pch";
 				INFOPLIST_FILE = "twitter-feed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fuzza.twitter-feed";
@@ -568,6 +618,8 @@
 			baseConfigurationReference = 6E3C60AACCDB3A0868F4A0CF /* Pods-twitter-feed.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "twitter-feed/twitter-feed-prefix.pch";
 				INFOPLIST_FILE = "twitter-feed/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fuzza.twitter-feed";

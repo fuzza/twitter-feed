@@ -1,0 +1,16 @@
+//
+//  twitter-feed-prefix.pch
+//  twitter-feed
+//
+//  Created by Alex Faizullov on 10/14/16.
+//  Copyright © 2016 Alex Faizullov. All rights reserved.
+//
+
+#ifndef twitter_feed_prefix_pch
+#define twitter_feed_prefix_pch
+
+#import <Mantle/Mantle.h>
+#import <IGListKit/IGListKit.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+#endif /* twitter_feed_prefix_pch */
