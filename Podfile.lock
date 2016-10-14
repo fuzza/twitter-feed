@@ -1,12 +1,17 @@
 PODS:
   - IGListKit (1.0.0)
+  - Mantle (2.0.7):
+    - Mantle/extobjc (= 2.0.7)
+  - Mantle/extobjc (2.0.7)
 
 DEPENDENCIES:
   - IGListKit
+  - Mantle
 
 SPEC CHECKSUMS:
   IGListKit: 3242c475fa77e2abf2d4de319703088008fbe9b9
+  Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
 
-PODFILE CHECKSUM: 1f0fdaab074d932ad9ac9cd23b60596151f9c86e
+PODFILE CHECKSUM: bd36a1a4f2e4a736d7a85b5b5c5019d83795a2ba
 
 COCOAPODS: 1.0.1
