@@ -22,6 +22,8 @@
 		6F16A7381DB1639100CF32D1 /* TwitterFeedViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A7371DB1639100CF32D1 /* TwitterFeedViewModel.m */; };
 		6F16A73F1DB16D4700CF32D1 /* TweetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A73E1DB16D4700CF32D1 /* TweetCell.m */; };
 		6F16A7431DB171C300CF32D1 /* TweetsSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A7421DB171C300CF32D1 /* TweetsSectionController.m */; };
+		6F16A7491DB24F0200CF32D1 /* LoadMoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A7481DB24F0200CF32D1 /* LoadMoreCell.m */; };
+		6F16A74C1DB24FBB00CF32D1 /* LoadMoreSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F16A74B1DB24FBB00CF32D1 /* LoadMoreSectionController.m */; };
 		F54DA60D98BD0B8F69175ADA /* libPods-twitter-feed.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 280F5E20961FF16A0AF9FE0E /* libPods-twitter-feed.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,10 @@
 		6F16A73E1DB16D4700CF32D1 /* TweetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetCell.m; sourceTree = "<group>"; };
 		6F16A7411DB171C300CF32D1 /* TweetsSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TweetsSectionController.h; sourceTree = "<group>"; };
 		6F16A7421DB171C300CF32D1 /* TweetsSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TweetsSectionController.m; sourceTree = "<group>"; };
+		6F16A7471DB24F0200CF32D1 /* LoadMoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreCell.h; sourceTree = "<group>"; };
+		6F16A7481DB24F0200CF32D1 /* LoadMoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMoreCell.m; sourceTree = "<group>"; };
+		6F16A74A1DB24FBB00CF32D1 /* LoadMoreSectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadMoreSectionController.h; sourceTree = "<group>"; };
+		6F16A74B1DB24FBB00CF32D1 /* LoadMoreSectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadMoreSectionController.m; sourceTree = "<group>"; };
 		87E0163DAA0E63E4775769B0 /* libPods-twitter-feedTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-twitter-feedTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A859F67EC45A7716D2126603 /* Pods-twitter-feedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-twitter-feedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-twitter-feedTests/Pods-twitter-feedTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -217,6 +223,8 @@
 			children = (
 				6F16A73D1DB16D4700CF32D1 /* TweetCell.h */,
 				6F16A73E1DB16D4700CF32D1 /* TweetCell.m */,
+				6F16A7471DB24F0200CF32D1 /* LoadMoreCell.h */,
+				6F16A7481DB24F0200CF32D1 /* LoadMoreCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -226,6 +234,8 @@
 			children = (
 				6F16A7411DB171C300CF32D1 /* TweetsSectionController.h */,
 				6F16A7421DB171C300CF32D1 /* TweetsSectionController.m */,
+				6F16A74A1DB24FBB00CF32D1 /* LoadMoreSectionController.h */,
+				6F16A74B1DB24FBB00CF32D1 /* LoadMoreSectionController.m */,
 			);
 			name = Collection;
 			sourceTree = "<group>";
@@ -484,12 +494,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F16A6FC1DB13D9F00CF32D1 /* TwitterFeedViewController.m in Sources */,
+				6F16A7491DB24F0200CF32D1 /* LoadMoreCell.m in Sources */,
 				6F16A7431DB171C300CF32D1 /* TweetsSectionController.m in Sources */,
 				6F16A6F91DB13D9F00CF32D1 /* AppDelegate.m in Sources */,
 				6F16A7381DB1639100CF32D1 /* TwitterFeedViewModel.m in Sources */,
 				6F16A7321DB15D2C00CF32D1 /* Tweet.m in Sources */,
 				6F16A6F61DB13D9F00CF32D1 /* main.m in Sources */,
 				6F16A72C1DB146CD00CF32D1 /* TweetsService.m in Sources */,
+				6F16A74C1DB24FBB00CF32D1 /* LoadMoreSectionController.m in Sources */,
 				6F16A73F1DB16D4700CF32D1 /* TweetCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

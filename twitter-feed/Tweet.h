@@ -13,4 +13,7 @@
 @property (nonatomic, strong) NSString *uid;
 @property (nonatomic, strong) NSString *text;
 
+@property (nonatomic, strong) NSNumber *retweetCount;
+@property (nonatomic, strong) NSDate *createdAt;
+
 @end

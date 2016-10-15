@@ -10,6 +10,8 @@
 #import "TweetCell.h"
 #import "Tweet.h"
 
+#define IGLK_LOGGING_ENABLED 1
+
 @interface TweetsSectionController ()
 
 @property (nonatomic, strong) Tweet *tweet;
@@ -23,7 +25,7 @@
 }
 
 - (void)didSelectItemAtIndex:(NSInteger)index {
-    [self.collectionContext reloadInSectionController:self atIndexes:[NSIndexSet indexSetWithIndex:0]];
+    //Do nothing
 }
 
 - (CGSize)sizeForItemAtIndex:(NSInteger)index {
